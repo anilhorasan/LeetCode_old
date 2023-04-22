@@ -1,6 +1,6 @@
 class Solution {
     
-    public String longestCommonPrefix2(String[] strs) {
+    public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0)
           return "";
 
@@ -12,7 +12,7 @@ class Solution {
         return strs[0];
     }
     
-    public String longestCommonPrefix(String[] strs) {
+    public String longestCommonPrefix2(String[] strs) {
         String result = "";
         
         boolean br = false;
