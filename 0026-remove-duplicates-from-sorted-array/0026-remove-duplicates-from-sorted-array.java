@@ -1,8 +1,7 @@
 class Solution {
     public int removeDuplicates(int[] nums){
         int left = 0;
-        int right = 0;
-        for(right = 1; right < nums.length; right++){
+        for(int right = 1; right < nums.length; right++){
             if(nums[right] != nums[left])    
                 nums[++left] = nums[right];
         }
@@ -60,7 +59,6 @@ class Solution {
         System.out.println();    
     }
 
-    
 }
 
 
