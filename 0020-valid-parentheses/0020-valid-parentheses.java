@@ -1,6 +1,6 @@
 class Solution {
     // Solution with map & stack
-    public boolean isValid2(String s) {
+    public boolean isValid(String s) {
         
         Map<Character, Character> map = new HashMap<>();
         Stack<Character> stack = new Stack<>();
@@ -17,7 +17,7 @@ class Solution {
                 continue;
             }
             if(map.containsValue(c)){
-                if(map.get(stack.peek()) != c) return false;
+                if(stack.empty() || map.get(stack.peek()) != c) return false;
                 else stack.pop();
             }
             
@@ -28,7 +28,7 @@ class Solution {
     }
     
     // Solution with only stack
-    public boolean isValid(String s) {
+    public boolean isValid2(String s) {
         Stack<Character> stack = new Stack<Character>();
         for(int i = 0; i < s.length(); i++){
             Character c = s.charAt(i);
