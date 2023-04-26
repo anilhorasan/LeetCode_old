@@ -1,4 +1,6 @@
 class Solution {
+    
+    // O(logn)
     public int searchInsert(int[] nums, int target){
         
         int left = 0;
@@ -10,10 +12,10 @@ class Solution {
            else if(target > nums[mid]) left = mid + 1;
            else return mid;
         }
-        return left;
-        
+        return left; 
     }
     
+    // O(n)
     public int searchInsert2(int[] nums, int target){
         int i;
         for(i = 0; i < nums.length; i++){
