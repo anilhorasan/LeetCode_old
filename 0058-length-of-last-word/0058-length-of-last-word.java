@@ -1,6 +1,6 @@
 class Solution {
     
-    public int lengthOfLastWord2(String s) {
+    public int lengthOfLastWord(String s) {
         int len = s.length();
         int count = 0;
         for(int i = len-1; i >= 0; i--){
@@ -11,7 +11,7 @@ class Solution {
     }
     
     
-    public int lengthOfLastWord(String s){
+    public int lengthOfLastWord2(String s){
         
         int len = s.length();
         char c = s.charAt(len-1);
@@ -24,7 +24,6 @@ class Solution {
         while(c != ' ' && len > 0){
             len -= 1;
             c = s.charAt(len);
-            
             result++;
         }
         if(c == ' ') result--;
