@@ -1,5 +1,5 @@
 class Solution {
-    public int mySqrt3(int x) {
+    public int mySqrt(int x) {
         if (x == 0 || x == 1) return x;
         int left = 0;
         int right = x;
@@ -25,7 +25,7 @@ class Solution {
     
     
     // simplest solution
-    public int mySqrt(int x){
+    public int mySqrt3(int x){
         
         int result = 1;
         while (result <= x / result)   result++;
