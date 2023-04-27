@@ -20,13 +20,16 @@ class Solution {
             r = (r + x/r) / 2;
         return (int) r;
     }
+    
     // teest case: 2147395599
     
+    
+    // simplest solution
     public int mySqrt(int x){
         
-        long result = 0;
-        while (result*result <= x)   result++;
-        return (int)result-1;
+        int result = 1;
+        while (result <= x / result)   result++;
+        return result-1;
     }
     
 }
