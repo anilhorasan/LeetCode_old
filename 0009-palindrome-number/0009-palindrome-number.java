@@ -1,7 +1,11 @@
 class Solution {
+      
+    // FIRST SOLUTION
     public boolean isPalindrome(int x){
-        if(x<0) return false;
-        else return reverse(x) == x;
+        if(x<0) 
+            return false;
+        else 
+            return reverse(x) == x;
     }
     
     private int reverse(int x){
@@ -13,6 +17,7 @@ class Solution {
         return reverse;
     }
     
+    // SECOND SOLUTION w/String and charAt loop
     public boolean isPalindrome2(int x) {
         String str = String.valueOf(x);
         int start = 0;
@@ -21,6 +26,13 @@ class Solution {
             if(str.charAt(start++) != str.charAt(end--)) return false;
         }
         return true;
+    }
+    
+    // THIRD SOLUTION w/StringBuilder
+    public boolean isPalindrome3(int x){
+        String str = String.valueOf(x);
+        StringBuilder s = new StringBuilder(String.valueOf(x));
+        return s == s.reverse();
     }
     
     
